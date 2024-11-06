@@ -9,7 +9,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
+workspace.xml
 # testing
 /coverage
 
@@ -31,7 +31,7 @@ yarn-error.log*
 
 # env files (can opt-in for commiting if needed)
 .env*
-
+.idea/*
 # vercel
 .vercel
 
