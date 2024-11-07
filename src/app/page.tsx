@@ -6,8 +6,10 @@ import frontend from '@/assets/icons/web-design.svg'
 import programming from '@/assets/icons/programming-languages.svg'
 import infra from '@/assets/icons/cloud-computing.svg'
 import { TechStackCard } from '@/components/tech-stack-card'
-import { languagesMap, frontendMap, backendMap, infraMap } from '@/utils/tech-stack-maps'
-import { SectionRoot, SectionTitle, SectionContent, SectionHeader } from '@/components/section'
+import { backendMap, frontendMap, infraMap, languagesMap } from '@/utils/tech-stack-maps'
+import { SectionContent, SectionHeader, SectionRoot, SectionTitle } from '@/components/section'
+import legalPerson from '@/assets/images/legal-person.png'
+import { ProjectCard } from '@/components/project-card'
 
 export default function Home() {
   return (
@@ -40,7 +42,27 @@ export default function Home() {
           <SectionHeader>
             <SectionTitle>Projetos que participo</SectionTitle>
           </SectionHeader>
-          <SectionContent>
+          <SectionContent className={'gap-5 lg:flex'}>
+            <ProjectCard
+              title={'Pró Criança'}
+              description={'Aplicação para controle interno'}
+              image={legalPerson}
+              status={'PRODUCTION'}
+            />
+
+            <ProjectCard
+              title={'Pró Criança'}
+              description={'Aplicação para controle interno'}
+              image={legalPerson}
+              status={'USER_TEST'}
+            />
+
+            <ProjectCard
+              title={'Pró Criança'}
+              description={'Aplicação para controle interno'}
+              image={legalPerson}
+              status={'DEVELOPMENT'}
+            />
 
           </SectionContent>
         </SectionRoot>

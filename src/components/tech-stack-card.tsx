@@ -14,9 +14,10 @@ export function TechStackCard({ image, stackMap, title }: TechStackCardProps) {
         alt={`Illustration of ${title}`}
         width={50}
         height={50}
+        className={'mx-auto lg:-mx-0'}
       />
 
-      <h2>{title}</h2>
+      <h2 className={'text-center lg:text-start'}>{title}</h2>
 
       <ul className={'list-disc px-4'}>
         {stackMap.map((item) => <li key={item.key}>{item.value}</li>)}
