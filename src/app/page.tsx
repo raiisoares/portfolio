@@ -1,12 +1,13 @@
 import { ModeToggle } from '@/components/theme/mode-toogle'
 import { NavLinks } from '@/components/nav-links'
 import { Separator } from '@/components/ui/separator'
-import backend from '@/assets/api-design.svg'
-import frontend from '@/assets/web-design.svg'
-import programming from '@/assets/programming-languages.svg'
-import infra from '@/assets/cloud-computing.svg'
+import backend from '@/assets/icons/api-design.svg'
+import frontend from '@/assets/icons/web-design.svg'
+import programming from '@/assets/icons/programming-languages.svg'
+import infra from '@/assets/icons/cloud-computing.svg'
 import { TechStackCard } from '@/components/tech-stack-card'
 import { languagesMap, frontendMap, backendMap, infraMap } from '@/utils/tech-stack-maps'
+import { SectionRoot, SectionTitle, SectionContent, SectionHeader } from '@/components/section'
 
 export default function Home() {
   return (
@@ -23,19 +24,26 @@ export default function Home() {
       </header>
 
       <main className="">
-        <div className={'flex flex-col items-center gap-16'}>
-          <h2 className={'text-center text-3xl'}>Tecnologias usadas nos projetos</h2>
-
-          <Separator className={'w-full'} />
-
-          <div className={'grid grid-cols-4 w-3/4 justify-items-center'}>
+        <SectionRoot>
+          <SectionHeader>
+            <SectionTitle>Tecnologias usadas nos projetos</SectionTitle>
+          </SectionHeader>
+          <SectionContent>
             <TechStackCard title={'Linguagens'} stackMap={languagesMap} image={programming} />
             <TechStackCard title={'Frontend'} stackMap={frontendMap} image={frontend} />
             <TechStackCard title={'Backend'} stackMap={backendMap} image={backend} />
             <TechStackCard title={'Infra'} stackMap={infraMap} image={infra} />
-          </div>
-        </div>
+          </SectionContent>
+        </SectionRoot>
 
+        <SectionRoot>
+          <SectionHeader>
+            <SectionTitle>Projetos que participo</SectionTitle>
+          </SectionHeader>
+          <SectionContent>
+
+          </SectionContent>
+        </SectionRoot>
       </main>
 
       <footer className="w-full py-10">
