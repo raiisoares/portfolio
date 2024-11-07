@@ -16,11 +16,10 @@ export default function Home() {
     <div className="grid px-10 grid-rows-[auto_1fr_auto] min-h-screen font-[family-name:var(--font-geist-sans)]">
 
       <header className={'py-10 flex items-center justify-between'}>
-        <span>Raí Soares</span>
+        <span className={'text-xl'}>Raí Soares</span>
 
         <nav className={'flex items-center gap-4'}>
           <NavLinks />
-
           <ModeToggle />
         </nav>
       </header>
@@ -54,7 +53,9 @@ export default function Home() {
         <Separator className={'w-full'} />
 
         <div className={'flex items-center justify-between pt-8'}>
-          <span>&copy; 2024 All rights reserved.</span>
+          <p className={'text-xs text-zinc-500 align-middle'}>
+            &copy; 2024 All rights reserved.
+          </p>
           <NavLinks />
         </div>
       </footer>
