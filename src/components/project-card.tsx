@@ -5,24 +5,30 @@ import { StatusBadge } from '@/components/status-badge'
 import { Status } from '@/utils/status-map'
 
 interface ProjectCardProps {
-  title: string
-  description: string
-  image: StaticImageData
-  status: Status
+  project: {
+    title: string
+    description: string
+    image: StaticImageData
+    status: Status
+    date: string
+    details: string
+  }
 }
 
-export function ProjectCard({ title, description, image, status }: ProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className={'my-4'}>
+    <Card className={'mb-4'}>
       <CardHeader>
+        <Image src={project.image} height={350} width={400} alt="Image" className="rounded-md object-cover" />
         <div className={'flex items-center gap-4'}>
-          <CardTitle>{title}</CardTitle>
-          <StatusBadge status={status} />
+          <CardTitle>{project.title}</CardTitle>
+          <StatusBadge status={project.status} />
         </div>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className={'text-primary'}>{project.description}</CardDescription>
+        <span className={'text-sm text-muted-foreground'}>{project.date}</span>
       </CardHeader>
       <CardContent className={'h-max'}>
-        <Image src={image} height={350} width={400} alt="Image" className="rounded-md object-cover" />
+        <p className={'text-sm text-foreground/70 '}>{project.details}</p>
       </CardContent>
       <CardFooter>
         <Button>

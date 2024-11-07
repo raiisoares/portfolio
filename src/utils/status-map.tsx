@@ -8,6 +8,6 @@ type StatusInfo = {
 
 export const statusMap: Record<Status, StatusInfo> = {
   PRODUCTION: { value: 'Produção', variant: 'default' },
-  USER_TEST: { value: 'Teste de usuário', variant: 'destructive' },
+  USER_TEST: { value: 'Em teste', variant: 'destructive' },
   DEVELOPMENT: { value: 'Desenvolvimento', variant: 'secondary' },
 }

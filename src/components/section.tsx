@@ -15,7 +15,7 @@ export function SectionTitle(props: SectionTitleProps) {
 
 export function SectionHeader(props: SectionHeaderProps) {
   return (
-    <div className={'w-full flex flex-col items-center gap-16'} {...props}>
+    <div className={'h-max w-full flex flex-col items-center gap-5'} {...props}>
       {props.children}
       <Separator className={'w-full'} />
     </div>

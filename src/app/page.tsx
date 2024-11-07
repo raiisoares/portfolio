@@ -8,8 +8,8 @@ import infra from '@/assets/icons/cloud-computing.svg'
 import { TechStackCard } from '@/components/tech-stack-card'
 import { backendMap, frontendMap, infraMap, languagesMap } from '@/utils/tech-stack-maps'
 import { SectionContent, SectionHeader, SectionRoot, SectionTitle } from '@/components/section'
-import legalPerson from '@/assets/images/legal-person.png'
 import { ProjectCard } from '@/components/project-card'
+import { proCrianca } from '@/utils/projects-data'
 
 export default function Home() {
   return (
@@ -43,27 +43,9 @@ export default function Home() {
             <SectionTitle>Projetos que participo</SectionTitle>
           </SectionHeader>
           <SectionContent className={'gap-5 lg:flex'}>
-            <ProjectCard
-              title={'Pró Criança'}
-              description={'Aplicação para controle interno'}
-              image={legalPerson}
-              status={'PRODUCTION'}
-            />
-
-            <ProjectCard
-              title={'Pró Criança'}
-              description={'Aplicação para controle interno'}
-              image={legalPerson}
-              status={'USER_TEST'}
-            />
-
-            <ProjectCard
-              title={'Pró Criança'}
-              description={'Aplicação para controle interno'}
-              image={legalPerson}
-              status={'DEVELOPMENT'}
-            />
-
+            <ProjectCard project={proCrianca} />
+            <ProjectCard project={proCrianca} />
+            <ProjectCard project={proCrianca} />
           </SectionContent>
         </SectionRoot>
       </main>
