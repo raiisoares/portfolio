@@ -27,7 +27,7 @@ export function NavLinks() {
             <Image src={linkedin} height={38} width={38} alt="Image" className="rounded-md object-cover" />
         </Link>
 
-        <Link target={'blank'} href="https://www.linkedin.com/in/raiisoares">
+        <Link target={'blank'} href="https://github.com/raiisoares">
             <Image src={github} height={38} width={38} alt="Image" className="rounded-md object-cover" />
         </Link>
       </div>

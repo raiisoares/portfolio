@@ -13,7 +13,7 @@ import { proCrianca } from '@/utils/projects-data'
 
 export default function Home() {
   return (
-    <div className="grid px-10 grid-rows-[auto_1fr_auto] min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className='grid px-10 grid-rows-[auto_1fr_auto] min-h-screen font-[family-name:var(--font-geist-sans)]'>
 
       <header className={'py-10 flex items-center justify-between'}>
         <span className={'text-xl'}>Raí Soares</span>
