@@ -48,7 +48,7 @@ export function ProjectCard({project}: ProjectCardProps) {
             <DialogTrigger asChild>
               <Button>Ver detalhes</Button>
             </DialogTrigger>
-            <DialogContent className={'lg:min-w-[750px] lg:h-3/4'}>
+            <DialogContent className={'h-screen lg:min-w-[750px] lg:h-3/4'}>
               <DialogHeader>
                 <DialogTitle>
                   {project.title}
@@ -77,7 +77,7 @@ export function ProjectCard({project}: ProjectCardProps) {
 
               <p>Tecnologias utilizadas: </p>
 
-              <ul className='grid grid-cols-4 gap-2 list-disc'>
+              <ul className='grid grid-cols-2 lg:grid-cols-4 gap-2 list-disc'>
                 {project.techStack.map((techStack, i) => (
                   <li key={i} className='ml-4'>{techStack}</li>
                 ))}
