@@ -12,6 +12,7 @@ import {
   DialogTrigger
 } from '@/components/ui/dialog'
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious,} from '@/components/ui/carousel'
+import {useTranslations} from "next-intl";
 
 interface ProjectCardProps {
   project: {
@@ -26,8 +27,9 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({project}: ProjectCardProps) {
+  const t = useTranslations('ProjectCard')
+
   return (
-    <>
       <Card className={'mb-4 max-w-[420px]'}>
         <CardHeader>
           <Image src={project.srcImgs[0]} height={350} width={400} alt='Image' className='rounded-md object-cover'/>
@@ -46,7 +48,7 @@ export function ProjectCard({project}: ProjectCardProps) {
         <CardFooter>
           <Dialog>
             <DialogTrigger asChild>
-              <Button>Ver detalhes</Button>
+              <Button>{t('details')}</Button>
             </DialogTrigger>
             <DialogContent className={'h-screen lg:min-w-[750px] lg:h-3/4'}>
               <DialogHeader>
@@ -75,7 +77,7 @@ export function ProjectCard({project}: ProjectCardProps) {
                 <CarouselNext className='absolute right-0 z-10'/>
               </Carousel>
 
-              <p>Tecnologias utilizadas: </p>
+              <p>{t('technology')}</p>
 
               <ul className='grid grid-cols-2 lg:grid-cols-4 gap-2 list-disc'>
                 {project.techStack.map((techStack, i) => (
@@ -86,6 +88,5 @@ export function ProjectCard({project}: ProjectCardProps) {
           </Dialog>
         </CardFooter>
       </Card>
-    </>
   )
 }

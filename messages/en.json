@@ -1,0 +1,26 @@
+{
+  "Home": {
+    "title": "Raí Soares - Full Stack Developer",
+    "about": "I am a full-stack developer and a Computer Science student at the Catholic University of Pernambuco."
+  },
+  "LanguagesSwitcher": {
+    "title": "Languages",
+    "pt": "Portuguese",
+    "en": "English"
+  },
+  "SectionsTitles": {
+    "techStackTitle": "Technologies used in my projects",
+    "projectsTitle": "Projects I am involved in",
+    "contactTitle": "Interested in collaborating? Get in touch with me"
+  },
+  "ContactForm": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit"
+  },
+  "ProjectCard": {
+    "technology": "Technologies used:",
+    "details": "Details"
+  }
+}

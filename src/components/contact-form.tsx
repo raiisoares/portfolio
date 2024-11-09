@@ -9,8 +9,11 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@
 import {Input} from '@/components/ui/input'
 import {Textarea} from '@/components/ui/textarea'
 import {toast} from "sonner"
+import {useTranslations} from "next-intl";
 
 export function ContactForm() {
+  const t = useTranslations('ContactForm')
+
   const form = useForm<z.infer<typeof ContactMeSchema>>({
     resolver: zodResolver(ContactMeSchema),
     defaultValues: {
@@ -38,9 +41,9 @@ export function ContactForm() {
             name='name'
             render={({field}) => (
               <FormItem className={'w-full'}>
-                <FormLabel>Nome</FormLabel>
+                <FormLabel>{t('name')}</FormLabel>
                 <FormControl>
-                  <Input placeholder='Nome' {...field}/>
+                  <Input placeholder={t('name')} {...field}/>
                 </FormControl>
                 <FormMessage/>
               </FormItem>
@@ -52,9 +55,9 @@ export function ContactForm() {
             name="email"
             render={({field}) => (
               <FormItem className={'w-full'}>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>{t('email')}</FormLabel>
                 <FormControl>
-                  <Input placeholder='Email' type={'email'} {...field}/>
+                  <Input placeholder={t('email')} type={'email'} {...field}/>
                 </FormControl>
                 <FormMessage/>
               </FormItem>
@@ -67,16 +70,16 @@ export function ContactForm() {
           name="message"
           render={({field}) => (
             <FormItem className={'h-40'}>
-              <FormLabel>Mensagem</FormLabel>
+              <FormLabel>{t('message')}</FormLabel>
               <FormControl>
-                <Textarea placeholder='Mensagem' {...field} className={'mx-0 h-40'}/>
+                <Textarea placeholder={t('message')} {...field} className={'mx-0 h-40'}/>
               </FormControl>
               <FormMessage/>
             </FormItem>
           )}
         />
 
-        <Button type="submit" className={'mt-8'}>Enviar</Button>
+        <Button type="submit" className={'mt-8'}>{t('submit')}</Button>
       </form>
     </Form>
   )

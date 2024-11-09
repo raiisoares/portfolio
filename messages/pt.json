@@ -1,0 +1,26 @@
+{
+  "Home": {
+    "title": "Raí Soares - Desenvolvedor Full Stack ",
+    "about": "Sou desenvolvedor full stack e estudante de Ciência da Computação pela Universidade Católica de Pernambuco."
+  },
+  "LanguagesSwitcher": {
+    "title": "Idiomas",
+    "pt": "Português",
+    "en": "Inglês"
+  },
+  "SectionsTitles": {
+    "techStackTitle": "Tecnologias utilizadas nos meus projetos",
+    "projectsTitle": "Projetos em que estou envolvido",
+    "contactTitle": "Interessado em colaborar? Entre em contato comigo"
+  },
+  "ContactForm": {
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "submit": "Enviar"
+  },
+  "ProjectCard": {
+    "details": "Detalhes",
+    "technology": "Tecnologias utilizadas:"
+  }
+}

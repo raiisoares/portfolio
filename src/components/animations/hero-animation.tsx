@@ -17,7 +17,7 @@ export function HeroAnimation() {
       loop
       play
       style={lottieStyle}
-      speed={0.8}
+      speed={0.7}
     />
   )
 }

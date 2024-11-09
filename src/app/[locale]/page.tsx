@@ -14,14 +14,19 @@ import {ApiDesign} from "@/assets/icons/api-design";
 import {ProgrammingLanguages} from "@/assets/icons/programming-languages";
 import {Frontend} from "@/assets/icons/frontend";
 import {Infra} from "@/assets/icons/infra";
+import {Languages} from "@/components/languages";
+import {useTranslations} from "next-intl";
 
 export default function Home() {
+  const t = useTranslations('SectionsTitles')
+
   return (
     <div className='grid px-10 grid-rows-[auto_1fr_auto] min-h-screen font-[family-name:var(--font-geist-sans)]'>
       <header className={'py-10 flex items-center justify-between'}>
         <span className={'text-xl'}>Raí Soares</span>
         <nav className={'flex items-center gap-4'}>
           <NavLinks/>
+          <Languages/>
           <ModeToggle/>
         </nav>
       </header>
@@ -32,7 +37,7 @@ export default function Home() {
 
           <SectionRoot>
             <SectionHeader>
-              <SectionTitle>Tecnologias usadas nos projetos</SectionTitle>
+              <SectionTitle>{t('techStackTitle')}</SectionTitle>
             </SectionHeader>
             <SectionContent className="grid grid-cols-2 lg:gap-20 justify-items-center lg:grid-cols-4">
               <TechStackCard title={'Linguagens'} stackMap={languagesMap} image={ProgrammingLanguages}/>
@@ -45,7 +50,7 @@ export default function Home() {
 
         <SectionRoot>
           <SectionHeader>
-            <SectionTitle>Projetos que participo</SectionTitle>
+            <SectionTitle>{t('projectsTitle')}</SectionTitle>
           </SectionHeader>
           <SectionContent className={'gap-5 lg:flex'}>
             <ProjectCard project={proCrianca}/>
@@ -56,7 +61,7 @@ export default function Home() {
 
         <SectionRoot>
           <SectionHeader>
-            <SectionTitle>Vamos trabalhar juntos? Entre em contato &#128075;</SectionTitle>
+            <SectionTitle>{t('contactTitle')} &#128075;</SectionTitle>
           </SectionHeader>
           <SectionContent className={'p-0 m-0 w-full lg:w-1/3'}>
             <ContactForm/>
