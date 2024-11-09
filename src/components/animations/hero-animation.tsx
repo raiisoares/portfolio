@@ -1,10 +1,10 @@
 import Lottie from 'react-lottie-player'
-import banner from '@/assets/lottie/software-development.json'
+import hero from '@/assets/lottie/software-development.json'
 
-export function BannerAnimation() {
+export function HeroAnimation() {
   return (
     <Lottie
-      animationData={banner}
+      animationData={hero}
       loop
       play
       style={{width: '100%', height: 450}}

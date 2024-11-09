@@ -7,7 +7,8 @@ import {zodResolver} from '@hookform/resolvers/zod'
 import {Button} from '@/components/ui/button'
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@/components/ui/form'
 import {Input} from '@/components/ui/input'
-import {Textarea} from '@/components/ui/textarea';
+import {Textarea} from '@/components/ui/textarea'
+import {toast} from "sonner"
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof ContactMeSchema>>({
@@ -20,7 +21,12 @@ export function ContactForm() {
   })
 
   function onSubmit(values: z.infer<typeof ContactMeSchema>) {
-    console.log(values)
+    try {
+      console.log(values)
+      toast.success('Contact form successfully')
+    } catch {
+      toast.error('Something goes wrong!')
+    }
   }
 
   return (
@@ -63,7 +69,7 @@ export function ContactForm() {
             <FormItem className={'h-40'}>
               <FormLabel>Mensagem</FormLabel>
               <FormControl>
-                <Textarea placeholder='Mensagem' {...field} className={'mx-0 h-40'} />
+                <Textarea placeholder='Mensagem' {...field} className={'mx-0 h-40'}/>
               </FormControl>
               <FormMessage/>
             </FormItem>

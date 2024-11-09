@@ -12,13 +12,12 @@ import {backendMap, frontendMap, infraMap, languagesMap} from '@/utils/tech-stac
 import {SectionContent, SectionHeader, SectionRoot, SectionTitle} from '@/components/section'
 import {ProjectCard} from '@/components/project-card'
 import {proCrianca} from '@/utils/projects-data'
-import {Banner} from "@/components/banner";
+import {Hero} from "@/components/hero";
 import {ContactForm} from "@/components/contact-form";
 
 export default function Home() {
   return (
     <div className='grid px-10 grid-rows-[auto_1fr_auto] min-h-screen font-[family-name:var(--font-geist-sans)]'>
-
       <header className={'py-10 flex items-center justify-between'}>
         <span className={'text-xl'}>Raí Soares</span>
         <nav className={'flex items-center gap-4'}>
@@ -29,7 +28,7 @@ export default function Home() {
 
       <main className='flex flex-col w-full'>
         <div className={'flex flex-col gap-6'}>
-          <Banner/>
+          <Hero/>
 
           <SectionRoot>
             <SectionHeader>
