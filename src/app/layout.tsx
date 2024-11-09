@@ -14,6 +14,9 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Raí Soares',
   description: `Raí Soares' Portfolio`,
+  icons:{
+    icon:['/favicon.ico'],
+  }
 }
 
 export default function RootLayout({children}: Readonly<{

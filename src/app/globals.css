@@ -7,7 +7,6 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-
 @layer base {
     :root {
         --background: 0 0% 100%;
