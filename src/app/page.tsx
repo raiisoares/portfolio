@@ -3,10 +3,6 @@
 import {ModeToggle} from '@/components/theme/mode-toogle'
 import {NavLinks} from '@/components/nav-links'
 import {Separator} from '@/components/ui/separator'
-import backend from '@/assets/icons/api-design.svg'
-import frontend from '@/assets/icons/web-design.svg'
-import programming from '@/assets/icons/programming-languages.svg'
-import infra from '@/assets/icons/cloud-computing.svg'
 import {TechStackCard} from '@/components/tech-stack-card'
 import {backendMap, frontendMap, infraMap, languagesMap} from '@/utils/tech-stack-maps'
 import {SectionContent, SectionHeader, SectionRoot, SectionTitle} from '@/components/section'
@@ -14,6 +10,10 @@ import {ProjectCard} from '@/components/project-card'
 import {proCrianca} from '@/utils/projects-data'
 import {Hero} from "@/components/hero";
 import {ContactForm} from "@/components/contact-form";
+import {ApiDesign} from "@/assets/icons/api-design";
+import {ProgrammingLanguages} from "@/assets/icons/programming-languages";
+import {Frontend} from "@/assets/icons/frontend";
+import {Infra} from "@/assets/icons/infra";
 
 export default function Home() {
   return (
@@ -35,10 +35,10 @@ export default function Home() {
               <SectionTitle>Tecnologias usadas nos projetos</SectionTitle>
             </SectionHeader>
             <SectionContent className="grid grid-cols-2 lg:gap-20 justify-items-center lg:grid-cols-4">
-              <TechStackCard title={'Linguagens'} stackMap={languagesMap} image={programming}/>
-              <TechStackCard title={'Frontend'} stackMap={frontendMap} image={frontend}/>
-              <TechStackCard title={'Backend'} stackMap={backendMap} image={backend}/>
-              <TechStackCard title={'Infra'} stackMap={infraMap} image={infra}/>
+              <TechStackCard title={'Linguagens'} stackMap={languagesMap} image={ProgrammingLanguages}/>
+              <TechStackCard title={'Frontend'} stackMap={frontendMap} image={Frontend}/>
+              <TechStackCard title={'Backend'} stackMap={backendMap} image={ApiDesign}/>
+              <TechStackCard title={'Infra'} stackMap={infraMap} image={Infra}/>
             </SectionContent>
           </SectionRoot>
         </div>

@@ -1,21 +1,17 @@
-import Image from 'next/image'
+import React from "react";
 
 interface TechStackCardProps {
-  image: string
+  image: React.ElementType
   stackMap: { key: string, value: string }[]
   title: string
 }
 
-export function TechStackCard({ image, stackMap, title }: TechStackCardProps) {
+export function TechStackCard({  image: ImageComponent, stackMap, title }: TechStackCardProps) {
   return (
     <div className={'space-y-4'}>
-      <Image
-        src={image}
-        alt={`Illustration of ${title}`}
-        width={50}
-        height={50}
-        className={'mx-auto lg:-mx-0'}
-      />
+      <div className="mx-auto lg:-mx-0 size-[50px]">
+        <ImageComponent />
+      </div>
 
       <h2 className={'text-center lg:text-start'}>{title}</h2>
 
