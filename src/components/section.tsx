@@ -1,11 +1,12 @@
 import {ComponentProps} from 'react'
 import {Separator} from '@/components/ui/separator'
+import {motion, MotionProps} from 'framer-motion'
+import {useInView} from 'react-intersection-observer'
 
 type SectionTitleProps = ComponentProps<'h2'>
 type SectionContentProps = ComponentProps<'div'>
 type SectionHeaderProps = ComponentProps<'div'>
-type SectionRootProps = ComponentProps<'div'>
-
+type SectionRootProps = ComponentProps<'div'> & MotionProps
 
 export function SectionTitle(props: SectionTitleProps) {
   return (
@@ -31,9 +32,19 @@ export function SectionContent(props: SectionContentProps) {
 }
 
 export function SectionRoot(props: SectionRootProps) {
+  const {ref, inView} = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  })
+
   return (
-    <div
+    <motion.div
+      ref={ref}
       className="flex flex-col items-center gap-16 pb-14"
-      {...props} />
+      initial={{opacity: 0}}
+      animate={{opacity: inView ? 1 : 0}}
+      transition={{duration: 0.6}}
+      {...props}
+    />
   )
 }
