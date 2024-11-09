@@ -20,13 +20,12 @@ export default function RootLayout({children}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
     <body className={`${jetBrainsMono.className} antialiased`}>
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="light"
       enableSystem
-      disableTransitionOnChange
     >
       {children}
       <Toaster/>
