@@ -26,7 +26,7 @@ export function SectionHeader(props: SectionHeaderProps) {
 export function SectionContent(props: SectionContentProps) {
   return (
     <div
-      className={'grid grid-cols-2 gap-4 justify-items-center lg:grid-cols-4 lg:w-3/4'}
+      className={'grid grid-cols-1 gap-4 justify-items-center w-full lg:grid-cols-4 lg:w-3/4'}
       {...props} />
   )
 }

@@ -13,6 +13,7 @@ import {SectionContent, SectionHeader, SectionRoot, SectionTitle} from '@/compon
 import {ProjectCard} from '@/components/project-card'
 import {proCrianca} from '@/utils/projects-data'
 import {Banner} from "@/components/banner";
+import {ContactForm} from "@/components/contact-form";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
             <SectionHeader>
               <SectionTitle>Tecnologias usadas nos projetos</SectionTitle>
             </SectionHeader>
-            <SectionContent>
+            <SectionContent className="grid grid-cols-2 lg:gap-20 justify-items-center lg:grid-cols-4">
               <TechStackCard title={'Linguagens'} stackMap={languagesMap} image={programming}/>
               <TechStackCard title={'Frontend'} stackMap={frontendMap} image={frontend}/>
               <TechStackCard title={'Backend'} stackMap={backendMap} image={backend}/>
@@ -51,6 +52,15 @@ export default function Home() {
             <ProjectCard project={proCrianca}/>
             <ProjectCard project={proCrianca}/>
             <ProjectCard project={proCrianca}/>
+          </SectionContent>
+        </SectionRoot>
+
+        <SectionRoot>
+          <SectionHeader>
+            <SectionTitle>Vamos trabalhar juntos? Entre em contato &#128075;</SectionTitle>
+          </SectionHeader>
+          <SectionContent className={'p-0 m-0 w-full lg:w-1/3'}>
+            <ContactForm/>
           </SectionContent>
         </SectionRoot>
       </main>
