@@ -41,5 +41,10 @@
     "PRODUCTION": "Produção",
     "USER_TEST": "Teste",
     "DEVELOPMENT": "Desenvolvimento"
+  },
+  "Email": {
+    "welcome": "Olá",
+    "message": "Obrigado pelo contato! Recebi sua mensagem e retornarei em breve. Agradeço a sua confiança e estou ansioso para conversar com você.",
+    "greeting": "Atenciosamente"
   }
 }
