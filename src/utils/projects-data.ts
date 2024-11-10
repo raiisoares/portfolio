@@ -11,7 +11,7 @@ export const proCrianca = {
   status: 'USER_TEST' as Status,
   srcImgs: [loginProCrianca, addProCrianca, listProCrianca],
   techStack: ['React', 'Spring Boot', 'Postgres', 'TanStack Query', 'shadcn/ui', 'Swagger', 'Storybook', 'AWS',
-    'Hook Form', 'Zod', 'Tailwind, Docker'],
+    'Hook Form', 'Zod', 'Tailwind', 'Docker'],
 }
 
 export const viaJem = {
