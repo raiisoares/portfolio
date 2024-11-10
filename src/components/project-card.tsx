@@ -55,7 +55,7 @@ export function ProjectCard({projectKey, projectData}: ProjectCardProps) {
           <DialogTrigger asChild>
             <Button>{t('details')}</Button>
           </DialogTrigger>
-          <DialogContent className={'h-screen lg:min-w-[750px] lg:h-3/4'}>
+          <DialogContent className={'h-4/5 lg:min-w-[750px] lg:h-3/4'}>
             <DialogHeader>
               <DialogTitle>
                 {project.title}
