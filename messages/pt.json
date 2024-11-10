@@ -22,5 +22,13 @@
   "ProjectCard": {
     "details": "Detalhes",
     "technology": "Tecnologias utilizadas:"
+  },
+  "Projects": {
+    "proCrianca": {
+      "title": "Pró Criança",
+      "description": "Aplicação para controle interno",
+      "details": "Aplicação de gerenciamento de matrículas de beneficiários, colaboradores, cursos, projetos, filtros personalizados e geração de relatórios.",
+      "date": "Março 2024"
+    }
   }
 }

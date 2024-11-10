@@ -53,9 +53,9 @@ export default function Home() {
             <SectionTitle>{t('projectsTitle')}</SectionTitle>
           </SectionHeader>
           <SectionContent className={'gap-5 lg:flex'}>
-            <ProjectCard project={proCrianca}/>
-            <ProjectCard project={proCrianca}/>
-            <ProjectCard project={proCrianca}/>
+            <ProjectCard projectKey={'proCrianca'} projectData={proCrianca}/>
+            <ProjectCard projectKey={'proCrianca'} projectData={proCrianca}/>
+            <ProjectCard projectKey={'proCrianca'} projectData={proCrianca}/>
           </SectionContent>
         </SectionRoot>
 

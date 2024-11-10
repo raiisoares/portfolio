@@ -22,5 +22,13 @@
   "ProjectCard": {
     "technology": "Technologies used:",
     "details": "Details"
+  },
+  "Projects": {
+    "proCrianca": {
+      "title": "Pro Criança",
+      "description": "Internal management application",
+      "details": "Management application for beneficiary enrollments, employees, courses, projects, custom filters, and report generation.",
+      "date": "March 2024"
+    }
   }
 }
