@@ -18,10 +18,17 @@ made to create a seamless presentation of my work.
 
 ## ▶️ Getting Started
 
-1. **Create a `.env.local` file**:
-    - Add a `RESEND_API_KEY=` with your Resend API key.
+1. **Rename the environment file**:
+    - Rename the existing `.env.example` file to `.env.local`.
 
-2. **Run the application**:
+2. **Fill in the environment variables**:
+    - Open the `.env.local` file and add the required variables as shown below:
+      ```env
+      RESEND_API_KEY=your-resend-api-key
+      OWNER_EMAIL=your-owner-email
+      DOMAIN_EMAIL=your-domain-email
+      ```
+3. **Run the application**:
     - To run the application in the development environment, use the following command:
       `pnpm dev`
 

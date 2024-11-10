@@ -8,8 +8,8 @@ import {Button} from '@/components/ui/button'
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@/components/ui/form'
 import {Input} from '@/components/ui/input'
 import {Textarea} from '@/components/ui/textarea'
-import {toast} from "sonner"
-import {useTranslations} from "next-intl";
+import {useTranslations} from "next-intl"
+import {toast} from 'sonner'
 
 export function ContactForm() {
   const t = useTranslations('ContactForm')
