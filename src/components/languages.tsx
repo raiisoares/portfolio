@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import {Link, usePathname} from "@/i18n/routing"
 import {useTranslations} from "next-intl"
+import {LanguagesIcon} from "@/assets/icons/languages";
 
 export function Languages() {
   const t = useTranslations('LanguagesSwitcher')
@@ -17,7 +18,9 @@ export function Languages() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+      <DropdownMenuTrigger>
+        <LanguagesIcon/>
+      </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel>{t('title')}</DropdownMenuLabel>
         <DropdownMenuSeparator/>
