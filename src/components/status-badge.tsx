@@ -1,16 +1,16 @@
-import { Badge } from '@/components/ui/badge'
-import { Status, statusMap } from '@/utils/status-map'
+import {Badge} from '@/components/ui/badge'
+import {Status, useStatusMap} from '@/utils/status-map'
 
 interface StatusBadgeProps {
   status: Status
 }
 
-export function StatusBadge({ status }: StatusBadgeProps) {
-  const badgeStatus: Status = status
+export function StatusBadge({status}: StatusBadgeProps) {
+  const {statusMap} = useStatusMap()
 
   return (
-    <Badge variant={statusMap[badgeStatus].variant}>
-      {statusMap[badgeStatus].value}
+    <Badge variant={statusMap[status].variant}>
+      {statusMap[status].value}
     </Badge>
   )
 }

@@ -18,7 +18,8 @@ import {Languages} from "@/components/languages";
 import {useTranslations} from "next-intl";
 
 export default function Home() {
-  const t = useTranslations('SectionsTitles')
+  const tTitles = useTranslations('SectionsTitles')
+  const tStack = useTranslations('TechStackTitles')
 
   return (
     <div className='grid px-10 grid-rows-[auto_1fr_auto] min-h-screen font-[family-name:var(--font-geist-sans)]'>
@@ -37,20 +38,20 @@ export default function Home() {
 
           <SectionRoot>
             <SectionHeader>
-              <SectionTitle>{t('techStackTitle')}</SectionTitle>
+              <SectionTitle>{tTitles('techStackTitle')}</SectionTitle>
             </SectionHeader>
-            <SectionContent className="grid grid-cols-2 space-y-4 lg:gap-20 justify-items-center lg:grid-cols-4">
-              <TechStackCard title={'Linguagens'} stackMap={languagesMap} image={ProgrammingLanguages}/>
-              <TechStackCard title={'Frontend'} stackMap={frontendMap} image={Frontend}/>
-              <TechStackCard title={'Backend'} stackMap={backendMap} image={ApiDesign}/>
-              <TechStackCard title={'Infra'} stackMap={infraMap} image={Infra}/>
+            <SectionContent className="grid grid-cols-2 space-y-4 lg:space-y-0 lg:gap-20 justify-items-center lg:grid-cols-4">
+              <TechStackCard title={tStack('languages')} stackMap={languagesMap} image={ProgrammingLanguages}/>
+              <TechStackCard title={tStack('frontend')} stackMap={frontendMap} image={Frontend}/>
+              <TechStackCard title={tStack('backend')} stackMap={backendMap} image={ApiDesign}/>
+              <TechStackCard title={tStack('infrastructure')} stackMap={infraMap} image={Infra}/>
             </SectionContent>
           </SectionRoot>
         </div>
 
         <SectionRoot>
           <SectionHeader>
-            <SectionTitle>{t('projectsTitle')}</SectionTitle>
+            <SectionTitle>{tTitles('projectsTitle')}</SectionTitle>
           </SectionHeader>
           <SectionContent className={'gap-5 lg:flex'}>
             <ProjectCard projectKey={'proCrianca'} projectData={proCrianca}/>
@@ -61,7 +62,7 @@ export default function Home() {
 
         <SectionRoot>
           <SectionHeader>
-            <SectionTitle>{t('contactTitle')} &#128075;</SectionTitle>
+            <SectionTitle>{tTitles('contactTitle')} &#128075;</SectionTitle>
           </SectionHeader>
           <SectionContent className={'p-0 m-0 w-full lg:w-1/3'}>
             <ContactForm/>

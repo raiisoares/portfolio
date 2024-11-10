@@ -19,6 +19,12 @@
     "message": "Mensagem",
     "submit": "Enviar"
   },
+  "TechStackTitles": {
+    "languages": "Linguagens",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "infrastructure": "Infraestrutura"
+  },
   "ProjectCard": {
     "details": "Detalhes",
     "technology": "Tecnologias utilizadas:"
@@ -30,5 +36,10 @@
       "details": "Aplicação de gerenciamento de matrículas de beneficiários, colaboradores, cursos, projetos, filtros personalizados e geração de relatórios.",
       "date": "Março 2024"
     }
+  },
+  "Status": {
+    "PRODUCTION": "Produção",
+    "USER_TEST": "Teste",
+    "DEVELOPMENT": "Desenvolvimento"
   }
 }

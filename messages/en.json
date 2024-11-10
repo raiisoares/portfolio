@@ -19,6 +19,12 @@
     "message": "Message",
     "submit": "Submit"
   },
+  "TechStackTitles": {
+    "languages": "Languages",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "infrastructure": "Infrastructure"
+  },
   "ProjectCard": {
     "technology": "Technologies used:",
     "details": "Details"
@@ -30,5 +36,10 @@
       "details": "Management application for beneficiary enrollments, employees, courses, projects, custom filters, and report generation.",
       "date": "March 2024"
     }
+  },
+  "Status": {
+    "PRODUCTION": "Production",
+    "USER_TEST": "User Test",
+    "DEVELOPMENT": "Development"
   }
 }
