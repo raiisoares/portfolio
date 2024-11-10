@@ -2,12 +2,13 @@ import type {Metadata} from 'next'
 import './globals.css'
 import {ThemeProvider} from '@/components/theme/theme-provider'
 import React from 'react'
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+import {NextIntlClientProvider} from 'next-intl'
+import {getMessages} from 'next-intl/server'
 import {JetBrains_Mono} from 'next/font/google'
-import {Toaster} from "@/components/ui/sonner";
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
+import {notFound} from 'next/navigation'
+import {routing} from '@/i18n/routing'
+import {Toaster} from 'sonner'
+
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
