@@ -2,12 +2,12 @@ import {Body, Container, Head, Hr, Html, Preview, Text,} from "@react-email/comp
 import * as React from "react";
 
 interface NotificationEmailProps {
-  username: string
+  name: string
   email: string
   message: string
 }
 
-export default function NotificationEmail({username, email, message}: NotificationEmailProps) {
+export default function NotificationEmail({name, email, message}: NotificationEmailProps) {
   return (
     <Html>
       <Head/>
@@ -18,7 +18,7 @@ export default function NotificationEmail({username, email, message}: Notificati
         <Container style={container}>
           <Text style={paragraph}>Um usuário entrou em contato via portifólio.</Text>
           <Text style={paragraph}>
-            Nome: {username} | Email: {email}
+            Nome: {name} | Email: {email}
           </Text>
           <Text style={paragraph}>
             Mensagem: {message}
@@ -34,7 +34,7 @@ export default function NotificationEmail({username, email, message}: Notificati
 }
 
 NotificationEmail.PreviewProps = {
-  username: "User",
+  name: "User",
   email: "email@email.com",
   message: "Um usuário entrou em contato via portifólio",
 } as NotificationEmailProps

@@ -23,12 +23,20 @@ export function ContactForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof ContactMeSchema>) {
+  async function onSubmit(values: z.infer<typeof ContactMeSchema>) {
     try {
-      console.log(values)
-      toast.success('Contact form successfully')
+      await fetch('/api/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values)
+      })
+
+      form.reset()
+      toast.success('Mensagem enviada com sucesso')
     } catch {
-      toast.error('Something goes wrong!')
+      toast.error('Erro ao enviar mensagem')
     }
   }
 
@@ -79,7 +87,7 @@ export function ContactForm() {
           )}
         />
 
-        <Button type="submit" className={'mt-8'}>{t('submit')}</Button>
+        <Button type="submit" disabled={form.formState.isSubmitting} className={'mt-8'}>{t('submit')}</Button>
       </form>
     </Form>
   )

@@ -4,15 +4,15 @@ import * as React from "react";
 // import code from '@/assets/icons/code.svg'
 
 interface ContactEmailProps {
-  username: string;
+  name: string;
 }
 
-export default function ContactEmail({username}: ContactEmailProps) {
+export default function ContactEmail({name}: ContactEmailProps) {
   return (
     <Html>
       <Head/>
       <Preview>
-        The sales intelligence platform that helps you uncover qualified leads.
+        Recebemos sua mensagem com sucesso.
       </Preview>
       <Body style={main}>
         <Container style={container}>
@@ -23,7 +23,7 @@ export default function ContactEmail({username}: ContactEmailProps) {
           {/*  alt="Koala"*/}
           {/*  style={logo}*/}
           {/*/>*/}
-          <Text style={paragraph}>Olá {username},</Text>
+          <Text style={paragraph}>Olá {name},</Text>
           <Text style={paragraph}>
             Obrigado pelo contato! Recebi sua mensagem e retornarei em breve.
             Agradeço a sua confiança e estou ansioso para conversar com você.
@@ -45,7 +45,7 @@ export default function ContactEmail({username}: ContactEmailProps) {
 }
 
 ContactEmail.PreviewProps = {
-  username: "User",
+  name: "User",
 } as ContactEmailProps
 
 const main = {
