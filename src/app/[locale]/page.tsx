@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className='grid px-10 grid-rows-[auto_1fr_auto] min-h-screen font-[family-name:var(--font-geist-sans)]'>
       <header className={'py-10 flex items-center justify-between'}>
-        <span className={'text-xl'}>Raí Soares</span>
+        <span className={'text-lg lg:text-xl'}>Raí Soares</span>
         <nav className={'flex items-center gap-4'}>
           <NavLinks/>
           <Languages/>
@@ -39,7 +39,7 @@ export default function Home() {
             <SectionHeader>
               <SectionTitle>{t('techStackTitle')}</SectionTitle>
             </SectionHeader>
-            <SectionContent className="grid grid-cols-2 lg:gap-20 justify-items-center lg:grid-cols-4">
+            <SectionContent className="grid grid-cols-2 space-y-4 lg:gap-20 justify-items-center lg:grid-cols-4">
               <TechStackCard title={'Linguagens'} stackMap={languagesMap} image={ProgrammingLanguages}/>
               <TechStackCard title={'Frontend'} stackMap={frontendMap} image={Frontend}/>
               <TechStackCard title={'Backend'} stackMap={backendMap} image={ApiDesign}/>

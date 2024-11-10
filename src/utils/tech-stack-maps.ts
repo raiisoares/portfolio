@@ -11,9 +11,10 @@ export const frontendMap = [
   {key: 'next', value: 'Next.js'},
   {key: 'react', value: 'React.js'},
   {key: 'tailwind', value: 'Tailwind'},
-  {key: 'framer-motion', value: 'Framer Motion'},
+  {key: 'framer-motion', value: 'Motion'},
   {key: 'playwright', value: 'Playwright'},
   {key: 'storybook', value: 'Storybook'},
+  {key: 'i18n', value: 'I18n'},
 ]
 
 export const backendMap = [
