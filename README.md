@@ -95,3 +95,4 @@ This software is available under the following licenses:
 
 Feel free to fork the repository, modify the code, and use it for your own projects. Contributions are welcome to help 
 improve the project and expand its capabilities.
+ 
