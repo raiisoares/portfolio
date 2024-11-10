@@ -7,7 +7,7 @@ import {TechStackCard} from '@/components/tech-stack-card'
 import {backendMap, frontendMap, infraMap, languagesMap} from '@/utils/tech-stack-maps'
 import {SectionContent, SectionHeader, SectionRoot, SectionTitle} from '@/components/section'
 import {ProjectCard} from '@/components/project-card'
-import {proCrianca} from '@/utils/projects-data'
+import {proCrianca, timeTabling, viaJem} from '@/utils/projects-data'
 import {Hero} from "@/components/hero";
 import {ContactForm} from "@/components/contact-form";
 import {ApiDesign} from "@/assets/icons/api-design";
@@ -55,8 +55,8 @@ export default function Home() {
           </SectionHeader>
           <SectionContent className={'gap-5 lg:flex'}>
             <ProjectCard projectKey={'proCrianca'} projectData={proCrianca}/>
-            <ProjectCard projectKey={'proCrianca'} projectData={proCrianca}/>
-            <ProjectCard projectKey={'proCrianca'} projectData={proCrianca}/>
+            <ProjectCard projectKey={'viaJem'} projectData={viaJem}/>
+            <ProjectCard projectKey={'timetabling'} projectData={timeTabling}/>
           </SectionContent>
         </SectionRoot>
 

@@ -35,6 +35,18 @@
       "description": "Internal management application",
       "details": "Management application for beneficiary enrollments, employees, courses, projects, custom filters, and report generation.",
       "date": "March 2024"
+    },
+    "viaJem": {
+      "title": "Via Jem",
+      "description": "Financial Management Application",
+      "details": "Application for financial management, client and employee control, invoices, and report generation for a transportation company.",
+      "date": "September 2024"
+    },
+    "timetabling": {
+      "title": "Timetabling",
+      "description": "Academic Schedule Manager",
+      "details": "Application for managing schedules, faculty distribution, and course laboratory allocation at UNICAP. In the early stages of development.",
+      "date": "November 2024"
     }
   },
   "Status": {

@@ -35,11 +35,23 @@
       "description": "Aplicação para controle interno",
       "details": "Aplicação de gerenciamento de matrículas de beneficiários, colaboradores, cursos, projetos, filtros personalizados e geração de relatórios.",
       "date": "Março 2024"
+    },
+    "viaJem": {
+      "title": "Via Jem",
+      "description": "Aplicação para controle financeiro",
+      "details": "Aplicação de gestão financeira, controle de clientes e colaboradores, faturas e geração de relatórios para uma transportadora.",
+      "date": "Setembro de 2024"
+    },
+    "timetabling": {
+      "title": "Timetabling",
+      "description": "Gerenciador de horários acadêmicos",
+      "details": "Aplicação para gerenciamento de horários, distribuição de professores e alocação de laboratórios de cursos acadêmicos da UNICAP. Em estágio inicial de desenvolvimento.",
+      "date": "Novembro de 2024"
     }
   },
   "Status": {
     "PRODUCTION": "Produção",
-    "USER_TEST": "Teste",
+    "USER_TEST": "Em Teste",
     "DEVELOPMENT": "Desenvolvimento"
   },
   "Email": {
