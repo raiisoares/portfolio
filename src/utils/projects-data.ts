@@ -3,13 +3,13 @@ import invoice from '@/assets/images/invoice.png'
 import loginViaJem from '@/assets/images/login-via-jem.png'
 import timetabling from '@/assets/images/timetabling.png'
 import loginProCrianca from '@/assets/images/login-pro-crianca.png'
-import addProCrianca from '@/assets/images/add-pro-crianca.png'
-import listProCrianca from '@/assets/images/list-procrianca.png'
+import addProCrianca from '@/assets/images/details-beneficiaries.png'
+import listProCrianca from '@/assets/images/search-beneficiaries.png'
 import {Status} from "@/utils/status-map";
 
 export const proCrianca = {
-  status: 'USER_TEST' as Status,
-  srcImgs: [loginProCrianca, addProCrianca, listProCrianca],
+  status: 'PRODUCTION' as Status,
+  srcImgs: [addProCrianca, listProCrianca, loginProCrianca, ],
   techStack: ['React', 'Spring Boot', 'Postgres', 'TanStack Query', 'shadcn/ui', 'Swagger', 'Storybook', 'AWS',
     'Hook Form', 'Zod', 'Tailwind', 'Docker'],
 }

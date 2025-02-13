@@ -11,7 +11,8 @@ export const frontendMap = [
   {key: 'next', value: 'Next.js'},
   {key: 'react', value: 'React.js'},
   {key: 'tailwind', value: 'Tailwind'},
-  {key: 'framer-motion', value: 'Motion'},
+  {key: 'framer-motion', value: 'Framer'},
+  {key: 'react-email', value: 'React Email'},
   {key: 'playwright', value: 'Playwright'},
   {key: 'storybook', value: 'Storybook'},
   {key: 'i18n', value: 'I18n'},
@@ -29,7 +30,8 @@ export const backendMap = [
 
 export const languagesMap = [
   {key: 'typescript', value: 'TypeScript'},
+  {key: 'javascript', value: 'JavaScript'},
   {key: 'java', value: 'Java'},
   {key: 'kotlin', value: 'Kotlin'},
-  {key: 'rust', value: 'Rust'},
+  {key: 'cpp', value: 'C++'},
 ]
