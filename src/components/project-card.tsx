@@ -35,7 +35,7 @@ export function ProjectCard({projectKey, projectData}: ProjectCardProps) {
   }
 
   return (
-    <Card className={'mb-4 max-w-[420px]'}>
+    <Card className={'mb-4 max-w-[420px] flex flex-col justify-between'}>
       <CardHeader>
         <Image src={projectData.srcImgs[0]} height={350} width={400} alt='Image' className='rounded-md object-cover'/>
         <div className={'flex items-center gap-4'}>
@@ -55,7 +55,7 @@ export function ProjectCard({projectKey, projectData}: ProjectCardProps) {
           <DialogTrigger asChild>
             <Button>{t('details')}</Button>
           </DialogTrigger>
-          <DialogContent className={'h-4/5 lg:min-w-[750px] lg:h-3/4'}>
+          <DialogContent className={'h-4/5  lg:min-w-[750px] lg:h-3/4 overflow-y-auto'}>
             <DialogHeader>
               <DialogTitle>
                 {project.title}
