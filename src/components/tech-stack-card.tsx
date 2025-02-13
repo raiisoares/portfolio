@@ -8,7 +8,7 @@ interface TechStackCardProps {
 
 export function TechStackCard({  image: ImageComponent, stackMap, title }: TechStackCardProps) {
   return (
-    <div className={'space-y-4'}>
+    <div className={'space-y-4 mt-4 lg:mt-0'}>
       <div className="mx-auto lg:-mx-0 size-[50px]">
         <ImageComponent />
       </div>
