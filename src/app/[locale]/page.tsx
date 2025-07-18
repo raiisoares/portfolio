@@ -22,7 +22,7 @@ export default function Home() {
   const tStack = useTranslations('TechStackTitles')
 
   return (
-    <div className='grid px-10 grid-rows-[auto_1fr_auto] min-h-screen font-[family-name:var(--font-geist-sans)]'>
+    <div className='grid px-10 grid-rows-[auto_1fr_auto] min-h-screen font-(family-name:--font-geist-sans)'>
       <header className={'py-10 flex items-center justify-between'}>
         <span className={'text-lg lg:text-xl'}>Raí Soares</span>
         <nav className={'flex items-center gap-4'}>
