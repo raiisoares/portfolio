@@ -19,7 +19,7 @@ export function Languages() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger aria-label='Select language'>
         <LanguagesIcon />
       </DropdownMenuTrigger>
       <DropdownMenuContent>

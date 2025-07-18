@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+import { getMessages, setRequestLocale } from 'next-intl/server'
 import type React from 'react'
 import { routing } from '@/i18n/routing'
 
@@ -27,6 +27,7 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages()
+  setRequestLocale(locale)
 
   return <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
 }
