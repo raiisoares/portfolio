@@ -17,5 +17,5 @@ export function useStatusMap() {
       USER_TEST: { value: t('USER_TEST'), variant: 'destructive' },
       DEVELOPMENT: { value: t('DEVELOPMENT'), variant: 'secondary' },
     } as Record<Status, StatusInfo>,
-  };
+  }
 }

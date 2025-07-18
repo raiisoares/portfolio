@@ -1,4 +1,6 @@
 'use client'
+import { useTranslations } from 'next-intl'
+import { LanguagesIcon } from '@/assets/icons/languages'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -6,10 +8,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import {Link, usePathname} from "@/i18n/routing"
-import {useTranslations} from "next-intl"
-import {LanguagesIcon} from "@/assets/icons/languages";
+} from '@/components/ui/dropdown-menu'
+import { Link, usePathname } from '@/i18n/routing'
 
 export function Languages() {
   const t = useTranslations('LanguagesSwitcher')
@@ -19,11 +19,11 @@ export function Languages() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <LanguagesIcon/>
+        <LanguagesIcon />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel>{t('title')}</DropdownMenuLabel>
-        <DropdownMenuSeparator/>
+        <DropdownMenuSeparator />
 
         <Link href={pathname} locale={'pt'}>
           <DropdownMenuItem>{t('pt')}</DropdownMenuItem>
@@ -34,6 +34,5 @@ export function Languages() {
         </Link>
       </DropdownMenuContent>
     </DropdownMenu>
-
   )
 }

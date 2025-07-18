@@ -1,8 +1,8 @@
-import {HeroAnimation} from "@/components/animations/hero-animation";
-import {useTranslations} from "next-intl";
+import { useTranslations } from 'next-intl'
+import { HeroAnimation } from '@/components/animations/hero-animation'
 
 export function Hero() {
-  const t = useTranslations('Home');
+  const t = useTranslations('Home')
 
   return (
     <div className={'flex lg:flex-row flex-col justify-center items-center lg:w-2/3 lg:mx-auto'}>
@@ -12,7 +12,7 @@ export function Hero() {
         <p className={'1/2'}>{t('about')}</p>
       </div>
       <div className={'w-full lg:w-2/3'}>
-        <HeroAnimation/>
+        <HeroAnimation />
       </div>
     </div>
   )

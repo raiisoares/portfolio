@@ -1,4 +1,4 @@
-import {z} from 'zod'
+import { z } from 'zod'
 
 const whitelistRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$/
 
@@ -16,6 +16,6 @@ export const ContactMeSchema = z.object({
         .map((word) => word[0].toLocaleUpperCase().concat(word.substring(1)))
         .join(' ')
     }),
-  email: z.string().email({message: 'Formato inválido de email'}),
+  email: z.string().email({ message: 'Formato inválido de email' }),
   message: z.string().min(1, 'O conteúdo do email está vazio!'),
 })
