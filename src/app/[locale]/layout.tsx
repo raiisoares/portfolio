@@ -1,54 +1,32 @@
-import type {Metadata} from 'next'
-import './globals.css'
-import {ThemeProvider} from '@/components/theme/theme-provider'
-import React from 'react'
-import {NextIntlClientProvider} from 'next-intl'
-import {getMessages} from 'next-intl/server'
-import {JetBrains_Mono} from 'next/font/google'
-import {notFound} from 'next/navigation'
-import {routing} from '@/i18n/routing'
-import {Toaster} from 'sonner'
-
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-})
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
+import type React from 'react'
+import { routing } from '@/i18n/routing'
 
 export const metadata: Metadata = {
   title: 'Raí Soares',
   description: `Raí Soares' Portfolio`,
   icons: {
     icon: ['/favicon.ico'],
-  }
+  },
 }
 
-export default async function RootLayout({children, params}: {
-  children: React.ReactNode;
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
   params: Promise<{ locale: string }>
 }) {
-  const {locale} = await params
+  const { locale } = await params
 
   if (!routing.locales.includes(locale as never)) {
-    notFound();
+    notFound()
   }
 
-  const messages = await getMessages();
+  const messages = await getMessages()
 
-  return (
-    <html lang="en" suppressHydrationWarning>
-    <body className={`${jetBrainsMono.className} antialiased`}>
-    <NextIntlClientProvider messages={messages}>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="light"
-        enableSystem
-      >
-        {children}
-        <Toaster/>
-      </ThemeProvider>
-    </NextIntlClientProvider>
-    </body>
-    </html>
-  )
+  return <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
 }

@@ -1,15 +1,15 @@
 'use client'
 
-import {useForm} from 'react-hook-form'
-import {ContactMeSchema} from '@/validations/contact-me-validation'
-import {z} from 'zod'
-import {zodResolver} from '@hookform/resolvers/zod'
-import {Button} from '@/components/ui/button'
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@/components/ui/form'
-import {Input} from '@/components/ui/input'
-import {Textarea} from '@/components/ui/textarea'
-import {useTranslations} from "next-intl"
-import {toast} from 'sonner'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useTranslations } from 'next-intl'
+import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
+import type { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { ContactMeSchema } from '@/validations/contact-me-validation'
 
 export function ContactForm() {
   const t = useTranslations('ContactForm')
@@ -30,7 +30,7 @@ export function ContactForm() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(values)
+        body: JSON.stringify(values),
       })
 
       form.reset()
@@ -47,27 +47,27 @@ export function ContactForm() {
           <FormField
             control={form.control}
             name='name'
-            render={({field}) => (
+            render={({ field }) => (
               <FormItem className={'w-full'}>
                 <FormLabel>{t('name')}</FormLabel>
                 <FormControl>
-                  <Input placeholder={t('name')} {...field}/>
+                  <Input placeholder={t('name')} {...field} />
                 </FormControl>
-                <FormMessage/>
+                <FormMessage />
               </FormItem>
             )}
           />
 
           <FormField
             control={form.control}
-            name="email"
-            render={({field}) => (
+            name='email'
+            render={({ field }) => (
               <FormItem className={'w-full'}>
                 <FormLabel>{t('email')}</FormLabel>
                 <FormControl>
-                  <Input placeholder={t('email')} type={'email'} {...field}/>
+                  <Input placeholder={t('email')} type={'email'} {...field} />
                 </FormControl>
-                <FormMessage/>
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -75,19 +75,21 @@ export function ContactForm() {
 
         <FormField
           control={form.control}
-          name="message"
-          render={({field}) => (
+          name='message'
+          render={({ field }) => (
             <FormItem className={'h-40'}>
               <FormLabel>{t('message')}</FormLabel>
               <FormControl>
-                <Textarea placeholder={t('message')} {...field} className={'mx-0 h-40'}/>
+                <Textarea placeholder={t('message')} {...field} className={'mx-0 h-40'} />
               </FormControl>
-              <FormMessage/>
+              <FormMessage />
             </FormItem>
           )}
         />
 
-        <Button type="submit" disabled={form.formState.isSubmitting} className={'mt-8'}>{t('submit')}</Button>
+        <Button type='submit' disabled={form.formState.isSubmitting} className={'mt-8'}>
+          {t('submit')}
+        </Button>
       </form>
     </Form>
   )
