@@ -1,11 +1,11 @@
-import addProCrianca from '@/assets/images/details-beneficiaries.png'
-import invoice from '@/assets/images/invoice.png'
-import legalPerson from '@/assets/images/legal-person.png'
-import loginProCrianca from '@/assets/images/login-pro-crianca.png'
-import loginViaJem from '@/assets/images/login-via-jem.png'
-import listProCrianca from '@/assets/images/search-beneficiaries.png'
-import timetabling from '@/assets/images/timetabling.png'
 import type { Status } from '@/utils/status-map'
+import addProCrianca from '../../public/assets/images/details-beneficiaries.png'
+import invoice from '../../public/assets/images/invoice.png'
+import legalPerson from '../../public/assets/images/legal-person.png'
+import loginProCrianca from '../../public/assets/images/login-pro-crianca.png'
+import loginViaJem from '../../public/assets/images/login-via-jem.png'
+import listProCrianca from '../../public/assets/images/search-beneficiaries.png'
+import timetabling from '../../public/assets/images/timetabling.png'
 
 export const proCrianca = {
   status: 'PRODUCTION' as Status,

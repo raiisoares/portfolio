@@ -1,7 +1,7 @@
-import type React from 'react'
+import type { ElementType } from 'react'
 
 interface TechStackCardProps {
-  image: React.ElementType
+  image: ElementType
   stackMap: { key: string; value: string }[]
   title: string
 }

@@ -1,6 +1,6 @@
 'use client'
+
 import { useTranslations } from 'next-intl'
-import { LanguagesIcon } from '@/assets/icons/languages'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Link, usePathname } from '@/i18n/routing'
+import { LanguagesIcon } from './icons/languages'
 
 export function Languages() {
   const t = useTranslations('LanguagesSwitcher')

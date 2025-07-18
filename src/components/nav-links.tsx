@@ -1,10 +1,12 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
-import githubDark from '@/assets/icons/github-dark.svg'
-import githubLight from '@/assets/icons/github-white.svg'
-import linkedinDark from '@/assets/icons/linkedin-dark.svg'
-import linkedinLight from '@/assets/icons/linkedin-white.svg'
+import githubDark from '../../public/assets/icons/github-dark.svg'
+import githubLight from '../../public/assets/icons/github-white.svg'
+import linkedinDark from '../../public/assets/icons/linkedin-dark.svg'
+import linkedinLight from '../../public/assets/icons/linkedin-white.svg'
 
 export function NavLinks() {
   const { theme } = useTheme()

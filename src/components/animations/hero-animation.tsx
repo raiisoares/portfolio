@@ -1,6 +1,8 @@
+'use client'
+
 import { useTheme } from 'next-themes'
 import Lottie from 'react-lottie-player'
-import hero from '@/assets/lottie/software-development.json'
+import hero from '../../../public/assets/lottie/software-development.json'
 
 export function HeroAnimation() {
   const { theme } = useTheme()
