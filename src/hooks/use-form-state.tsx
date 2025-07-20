@@ -1,6 +1,6 @@
 import { type FormEvent, useState, useTransition } from 'react'
 
-interface FormState {
+export interface FormState {
   success: boolean
   message: string | null
   errors: Record<string, string[]> | null
@@ -8,7 +8,8 @@ interface FormState {
 
 export function useFormState(
   action: (data: FormData) => Promise<FormState>,
-  onSuccess?: () => Promise<void> | void,
+  onSuccess?: (message: string | null) => Promise<void> | void,
+  onError?: (message: string | null) => Promise<void> | void,
   initialState?: FormState,
 ) {
   const [isPending, startTransition] = useTransition()
@@ -23,9 +24,11 @@ export function useFormState(
     startTransition(async () => {
       const state = await action(data)
 
-      if (state.success && onSuccess) {
+      if (state.success) {
+        if (onSuccess) await onSuccess(state.message)
         form.reset()
-        await onSuccess()
+      } else {
+        if (onError) await onError(state.message)
       }
 
       setFormState(state)
