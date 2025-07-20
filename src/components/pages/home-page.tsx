@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import { ContactForm } from '@/components/contact-form'
+import { ContactForm } from '@/components/contact-form/contact-form'
 import { Hero } from '@/components/hero'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
