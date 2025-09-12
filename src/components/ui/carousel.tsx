@@ -153,7 +153,7 @@ const CarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
     const { orientation } = useCarousel()
 
     return (
-        // biome-ignore lint: reason
+      // biome-ignore lint: reason
       <div
         ref={ref}
         role='group'
