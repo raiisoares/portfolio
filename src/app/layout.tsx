@@ -10,10 +10,31 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Raí Soares',
-  description: `Raí Soares' Portfolio`,
+  title: 'Raí Soares | Desenvolvedor Full Stack',
+  description: `Desenvolvedor Full Stack especializado em React, Next.js e Spring Boot. Transformando ideias em 
+    software eficiente e escalável.`,
+  robots: 'index, follow',
   icons: {
     icon: ['/favicon.ico'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  openGraph: {
+    title: 'Raí Soares',
+    description: 'Transformando ideias em software.',
+    url: 'https://raisoares.com/og-image.png',
+    siteName: 'Raí Soares',
+    locale: 'pt_BR',
+    type: 'website',
+    images: [
+      {
+        url: 'https://raisoares.com/og-image.png',
+        width: 800,
+        height: 600,
+        alt: 'Raí Soares',
+      },
+    ],
   },
 }
 

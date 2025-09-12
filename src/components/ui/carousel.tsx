@@ -153,6 +153,7 @@ const CarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
     const { orientation } = useCarousel()
 
     return (
+      // biome-ignore lint: reason
       <div
         ref={ref}
         role='group'
@@ -221,4 +222,5 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
 )
 CarouselNext.displayName = 'CarouselNext'
 
+// biome-ignore format: false positive
 export { type CarouselApi, Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext }
