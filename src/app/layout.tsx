@@ -23,13 +23,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Raí Soares',
     description: 'Transformando ideias em software.',
-    url: 'https://raisoares.com/og-image.png',
+    url: `${process.env.BASE_URL}/og-image.png`,
     siteName: 'Raí Soares',
     locale: 'pt_BR',
     type: 'website',
     images: [
       {
-        url: 'https://raisoares.com/og-image.png',
+        url: `${process.env.BASE_URL}/og-image.png`,
         width: 800,
         height: 600,
         alt: 'Raí Soares',
