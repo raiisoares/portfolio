@@ -9,6 +9,19 @@ const jetBrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Ra� soares',
+    alternateName: 'raiisoares',
+    description: 'Desenvolvedor Full Stack especializado em React, Next.js e Spring Boot',
+    image: 'https://github.com/raiisoares.png',
+    sameAs: ['https://github.com/raiisoares', 'https://linkedin.com/in/raiisoares'],
+  },
+}
+
 export const metadata: Metadata = {
   title: {
     default: 'Raí Soares',
@@ -43,6 +56,13 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='pt-BR' suppressHydrationWarning>
+      <head>
+        <script
+          type='application/ld+json'
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: false positive
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      </head>
       <body className={`${jetBrainsMono.className} antialiased`}>
         <Providers>{children}</Providers>
       </body>
