@@ -34,7 +34,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     openGraph: {
       description: isPt ? 'Transformando ideias em software' : 'Turning ideas into software',
+      url: `${process.env.BASE_URL}/${locale}`,
       locale: isPt ? 'pt_BR' : 'en_US',
+      images: [
+        {
+          url: `${process.env.BASE_URL}/og-image.png`,
+          width: 800,
+          height: 600,
+          alt: 'Raí Soares',
+        },
+      ],
     },
   }
 }

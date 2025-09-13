@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Raí Soares',
     description: 'Transformando ideias em software.',
-    url: `${process.env.BASE_URL}/og-image.png`,
+    url: `${process.env.BASE_URL}/`,
     siteName: 'Raí Soares',
     locale: 'pt_BR',
     type: 'website',
