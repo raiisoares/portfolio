@@ -10,9 +10,12 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Raí Soares | Desenvolvedor Full Stack',
-  description: `Desenvolvedor Full Stack especializado em React, Next.js e Spring Boot. Transformando ideias em 
-    software eficiente e escalável.`,
+  title: {
+    default: 'Raí Soares',
+    template: 'Raí Soares | %s',
+  },
+  description: `Desenvolvedor Full Stack especializado em React, Next.js e Spring Boot. Transformando ideias em software 
+            eficiente e escalável.`,
   robots: 'index, follow',
   icons: {
     icon: ['/favicon.ico'],
