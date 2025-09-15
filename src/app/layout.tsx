@@ -3,66 +3,53 @@ import './globals.css'
 import { JetBrains_Mono } from 'next/font/google'
 import type React from 'react'
 import { Providers } from '@/app/providers'
+import { DESCRIPTION_PT, KEYWORDS, OG_DESCRIPTION_PT, TITLE } from '@/utils/constants/metadata'
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap',
 })
 
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  mainEntity: {
-    '@type': 'Person',
-    name: 'Ra� soares',
-    alternateName: 'raiisoares',
-    description: 'Desenvolvedor Full Stack especializado em React, Next.js e Spring Boot',
-    image: 'https://github.com/raiisoares.png',
-    sameAs: ['https://github.com/raiisoares', 'https://linkedin.com/in/raiisoares'],
-  },
-}
-
 export const metadata: Metadata = {
   title: {
-    default: 'Raí Soares',
-    template: 'Raí Soares | %s',
+    default: TITLE,
+    template: `${TITLE} | %s`,
   },
-  description: `Desenvolvedor Full Stack especializado em React, Next.js e Spring Boot. Transformando ideias em software 
-            eficiente e escalável.`,
+  description: DESCRIPTION_PT,
+  // biome-ignore lint/style/noNonNullAssertion: false positive
+  metadataBase: new URL(process.env.BASE_URL!),
   robots: 'index, follow',
+  keywords: KEYWORDS,
   icons: {
     icon: ['/favicon.ico'],
   },
-  twitter: {
-    card: 'summary_large_image',
-  },
   openGraph: {
-    title: 'Raí Soares',
-    description: 'Transformando ideias em software.',
-    siteName: 'Raí Soares',
+    title: TITLE,
+    description: OG_DESCRIPTION_PT,
+    siteName: TITLE,
     locale: 'pt_BR',
     type: 'website',
     images: [
       {
-        url: `${process.env.BASE_URL}/og-image.png`,
-        width: 800,
-        height: 600,
-        alt: 'Raí Soares',
+        url: new URL(`${process.env.BASE_URL}/og-image.png`),
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+        alt: TITLE,
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION_PT,
+    images: ['/og-image.png'],
   },
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='pt-BR' suppressHydrationWarning>
-      <head>
-        <script
-          type='application/ld+json'
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: false positive
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      </head>
+    <html lang='pt-BR'>
       <body className={`${jetBrainsMono.className} antialiased`}>
         <Providers>{children}</Providers>
       </body>

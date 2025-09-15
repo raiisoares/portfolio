@@ -4,6 +4,15 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import type React from 'react'
 import { routing } from '@/i18n/routing'
+import {
+  DESCRIPTION_EN,
+  DESCRIPTION_PT,
+  OG_DESCRIPTION_EN,
+  OG_DESCRIPTION_PT,
+  SUBTITLE_EN,
+  SUBTITLE_PT,
+  TITLE,
+} from '@/utils/constants/metadata'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -13,35 +22,32 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 
   const isPt = locale === 'pt'
-
-  const titleSuffix = isPt ? 'Desenvolvedor Full Stack' : 'Full Stack Developer'
-  const description = isPt
-    ? `Desenvolvedor Full Stack especializado em React, Next.js e Spring Boot. Transformando ideias em software 
-        eficiente e escalável.`
-    : `Full Stack Developer specialized in React, Next.js and Spring Boot. Turning ideas into efficient and 
-        scalable software.`
+  const titleSuffix = isPt ? SUBTITLE_PT : SUBTITLE_EN
+  const description = isPt ? DESCRIPTION_PT : DESCRIPTION_EN
+  const ogDescription = isPt ? OG_DESCRIPTION_PT : OG_DESCRIPTION_EN
 
   return {
     title: titleSuffix,
     description,
     robots: 'index, follow',
     alternates: {
-      canonical: `${process.env.BASE_URL}`,
+      canonical: new URL(`${process.env.BASE_URL}`),
       languages: {
-        pt: `${process.env.BASE_URL}/pt`,
-        en: `${process.env.BASE_URL}/en`,
+        pt: new URL(`${process.env.BASE_URL}/pt`),
+        en: new URL(`${process.env.BASE_URL}/en`),
       },
     },
     openGraph: {
-      description: isPt ? 'Transformando ideias em software' : 'Turning ideas into software',
-      url: `${process.env.BASE_URL}/${locale}`,
+      description: ogDescription,
+      url: new URL(`${process.env.BASE_URL}/${locale}`),
       locale: isPt ? 'pt_BR' : 'en_US',
       images: [
         {
-          url: `${process.env.BASE_URL}/og-image.png`,
-          width: 800,
-          height: 600,
-          alt: 'Raí Soares',
+          url: new URL(`${process.env.BASE_URL}/og-image.png`),
+          width: 1200,
+          height: 630,
+          type: 'image/png',
+          alt: TITLE,
         },
       ],
     },
