@@ -1,4 +1,4 @@
-import { NavLinks } from '@/components/nav-links'
+import { NavLinks } from '@/components/navigation/nav-links'
 import { Separator } from '@/components/ui/separator'
 
 export function Footer() {

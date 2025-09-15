@@ -1,5 +1,5 @@
 import { Languages } from '@/components/languages'
-import { NavLinks } from '@/components/nav-links'
+import { NavLinks } from '@/components/navigation/nav-links'
 import { ModeToggle } from '@/components/theme/mode-toogle'
 
 export function Header() {
