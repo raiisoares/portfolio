@@ -16,8 +16,6 @@ export const metadata: Metadata = {
     template: `${TITLE} | %s`,
   },
   description: DESCRIPTION_PT,
-  // biome-ignore lint/style/noNonNullAssertion: false positive
-  metadataBase: new URL(process.env.BASE_URL!),
   robots: 'index, follow',
   keywords: KEYWORDS,
   icons: {
