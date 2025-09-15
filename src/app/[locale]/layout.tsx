@@ -31,19 +31,22 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description,
     robots: 'index, follow',
     alternates: {
-      canonical: new URL(`${process.env.BASE_URL}`),
+      canonical: `${process.env.BASE_URL}`,
       languages: {
-        pt: new URL(`${process.env.BASE_URL}/pt`),
-        en: new URL(`${process.env.BASE_URL}/en`),
+        pt: `${process.env.BASE_URL}/pt`,
+        en: `${process.env.BASE_URL}/en`,
       },
+    },
+    icons: {
+      icon: ['/favicon.ico'],
     },
     openGraph: {
       description: ogDescription,
-      url: new URL(`${process.env.BASE_URL}/${locale}`),
+      url: `${process.env.BASE_URL}/${locale}`,
       locale: isPt ? 'pt_BR' : 'en_US',
       images: [
         {
-          url: new URL(`${process.env.BASE_URL}/og-image.png`),
+          url: `${process.env.BASE_URL}/og-image.png`,
           width: 1200,
           height: 630,
           type: 'image/png',
