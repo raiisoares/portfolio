@@ -3,7 +3,7 @@ import './globals.css'
 import { JetBrains_Mono } from 'next/font/google'
 import type React from 'react'
 import { Providers } from '@/app/providers'
-import { DESCRIPTION_PT, KEYWORDS, OG_DESCRIPTION_PT, TITLE } from '@/utils/constants/metadata'
+import { DESCRIPTION_PT, GITHUB_URL, KEYWORDS, OG_DESCRIPTION_PT, TITLE } from '@/utils/constants/metadata'
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   description: DESCRIPTION_PT,
   robots: 'index, follow',
   keywords: KEYWORDS,
+  authors: {
+    url: GITHUB_URL,
+    name: TITLE,
+  },
   icons: {
     icon: ['/favicon.ico'],
   },

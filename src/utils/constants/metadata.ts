@@ -1,6 +1,7 @@
 const TITLE = 'Raí Soares'
 const SUBTITLE_PT = 'Desenvolvedor Full Stack'
 const SUBTITLE_EN = 'Full Stack Developer'
+const GITHUB_URL = 'https://www.github.com/raiisoares'
 const DESCRIPTION_PT =
   'Desenvolvedor Full Stack especializado em React, Next.js e Spring Boot. Transformando ideias em software eficiente e escalável.'
 const DESCRIPTION_EN =
@@ -25,6 +26,7 @@ export {
   TITLE,
   SUBTITLE_PT,
   SUBTITLE_EN,
+  GITHUB_URL,
   DESCRIPTION_PT,
   DESCRIPTION_EN,
   OG_DESCRIPTION_PT,
